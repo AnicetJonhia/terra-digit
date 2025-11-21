@@ -71,7 +71,7 @@ page = st.sidebar.radio("Sélectionner la page", ["Business Model", "Financement
 # ---------- Page: Business Model ----------
 if page == "Business Model":
     st.markdown("<h1 style='color:#0b6b2f'>Business Model — TerraDigit</h1>", unsafe_allow_html=True)
-    st.markdown("Modèle économique synthétique — **projets sur-mesure facturés par client** (développement, IA légère, accompagnement terrain).")
+    st.markdown("Modèle économique synthétique — **projets sur-mesure facturés par client** (développement logiciel / IA , accompagnement terrain).")
 
     df_bm = df_from_business_csv(BUSINESS_MODEL_CSV)
     st.dataframe(df_bm, width="stretch")
@@ -153,7 +153,7 @@ elif page == "Financement & utilisation":
 # ---------- Page: ROI ----------
 elif page == "ROI":
     st.markdown("<h1 style='color:#0b6b2f'>Estimation du Retour sur Investissement (ROI)</h1>", unsafe_allow_html=True)
-    st.markdown("Calculateur simplifié — hypothèses réalistes pour des projets sur-mesure à Madagascar. Ajustez les paramètres.")
+    st.markdown("Calculateur simplifié — hypothèses réalistes pour des projets sur-mesure à Madagascar.")
 
     col1, col2 = st.columns(2)
     with col1:
@@ -274,7 +274,7 @@ elif page == "ROI":
         # Use st.markdown to color the key estimate
         st.markdown(f"**Estimation prudente :** récupération de l'investissement en environ **<span style='color:#0b6b2f'>{base_months:.1f} mois</span>** (scénario base).", unsafe_allow_html=True)
 
-    st.info("Remarques : ces estimations sont simplifiées. À Madagascar, facteurs locaux (adoption, connectivité, saisonnalité) peuvent fortement impacter les résultats.")
+    st.info("Remarques : ces estimations sont simplifiées.")
 
 # ---------- Footer ----------
 st.sidebar.markdown("---")
